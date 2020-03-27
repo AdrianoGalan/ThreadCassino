@@ -102,6 +102,7 @@ public class TelaPrincipal extends JFrame {
 				try {
 					TelaPrincipal frame = new TelaPrincipal();
 					frame.setVisible(true);
+					frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -119,6 +120,7 @@ public class TelaPrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
 
 		dados = new ArrayList<String>();
 
