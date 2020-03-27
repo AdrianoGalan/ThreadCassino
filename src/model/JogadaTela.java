@@ -71,7 +71,7 @@ public class JogadaTela extends Thread {
 				
 					labelJoga1_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource(dados.get(numAleatorio.nextInt(6)))));
 					labelJoga1_2.setIcon(new ImageIcon(TelaPrincipal.class.getResource(dados.get(numAleatorio.nextInt(6)))));
-					sleep(150);
+					sleep(250);
 				
 			
 				labelJoga1_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource(dados.get(dado1-1))));

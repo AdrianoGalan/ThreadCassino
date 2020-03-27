@@ -121,7 +121,7 @@ public class BtInicioControle implements ActionListener {
 		
 		Thread j1 = new JogadaTela("JOGADOR 1", controle, dados, labelJoga1_1, labelJoga1_2, textField1, textField2, textField3, btnInicio, textFieldPontos1);
 		j1.start();
-	//	textFieldPontos1.setText("11");
+
 		Thread j2 = new JogadaTela("JOGADOR 2", controle, dados, labelJoga2_1, labelJoga2_2, textField1, textField2, textField3, btnInicio, textFieldPontos2);
 		j2.start();
 		Thread j3 = new JogadaTela("JOGADOR 3", controle, dados, labelJoga3_1, labelJoga3_2, textField1, textField2, textField3, btnInicio, textFieldPontos3);
