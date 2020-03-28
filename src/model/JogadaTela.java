@@ -66,6 +66,7 @@ public class JogadaTela extends Thread {
 
 	private void jogo() {
 		btnInicio.setEnabled(false);
+		chckbxFimJogo.setEnabled(false);
 
 		int dado1;
 		int dado2;
@@ -149,6 +150,7 @@ public class JogadaTela extends Thread {
 			break;
 		case 12:
 			btnInicio.setEnabled(true);
+			chckbxFimJogo.setEnabled(true);
 			break;
 
 		default:
