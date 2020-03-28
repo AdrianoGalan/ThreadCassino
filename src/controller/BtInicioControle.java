@@ -1,11 +1,13 @@
 package controller;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -54,6 +56,7 @@ public class BtInicioControle implements ActionListener {
 	private JTextField textFieldPontos11;
 	private JTextField textFieldPontos12;
 	private JButton btnInicio;
+	private JCheckBox chckbxFimJogo;
 	Semaphore controle = new Semaphore(1);
 	
 	public BtInicioControle(ArrayList<String> dados, JLabel labelJoga1_1, JLabel labelJoga1_2, JLabel labelJoga2_2,
@@ -65,7 +68,7 @@ public class BtInicioControle implements ActionListener {
 			JTextField textField3,JTextField textFieldPontos1, JTextField textFieldPontos2, JTextField textFieldPontos3,
 			JTextField textFieldPontos4, JTextField textFieldPontos5, JTextField textFieldPontos6,
 			JTextField textFieldPontos7, JTextField textFieldPontos8, JTextField textFieldPontos9,
-			JTextField textFieldPontos10, JTextField textFieldPontos11, JTextField textFieldPontos12, JButton btnInicio) {
+			JTextField textFieldPontos10, JTextField textFieldPontos11, JTextField textFieldPontos12, JButton btnInicio, JCheckBox chckbxFimJogo) {
 		super();
 		this.dados = dados;
 		this.labelJoga1_1 = labelJoga1_1;
@@ -108,6 +111,7 @@ public class BtInicioControle implements ActionListener {
 		this.textFieldPontos11 = textFieldPontos11;
 		this.textFieldPontos12 = textFieldPontos12;
 		this.btnInicio = btnInicio;
+		this.chckbxFimJogo = chckbxFimJogo;
 	}
 
 	@Override
@@ -118,31 +122,46 @@ public class BtInicioControle implements ActionListener {
 	}
 	
 	private void iniciaThread() {
+		textField1.setBackground(Color.white);
+		textField2.setBackground(Color.white);
+		textField3.setBackground(Color.white);
+		textFieldPontos1.setBackground(Color.white);
+		textFieldPontos2.setBackground(Color.white);
+		textFieldPontos3.setBackground(Color.white);
+		textFieldPontos4.setBackground(Color.white);
+		textFieldPontos5.setBackground(Color.white);
+		textFieldPontos6.setBackground(Color.white);
+		textFieldPontos7.setBackground(Color.white);
+		textFieldPontos8.setBackground(Color.white);
+		textFieldPontos9.setBackground(Color.white);
+		textFieldPontos10.setBackground(Color.white);
+		textFieldPontos11.setBackground(Color.white);
+		textFieldPontos12.setBackground(Color.white);
 		
-		Thread j1 = new JogadaTela("JOGADOR 1", controle, dados, labelJoga1_1, labelJoga1_2, textField1, textField2, textField3, btnInicio, textFieldPontos1);
+		Thread j1 = new JogadaTela("JOGADOR 1", controle, dados, labelJoga1_1, labelJoga1_2, textField1, textField2, textField3, btnInicio, textFieldPontos1, chckbxFimJogo);
 		j1.start();
 
-		Thread j2 = new JogadaTela("JOGADOR 2", controle, dados, labelJoga2_1, labelJoga2_2, textField1, textField2, textField3, btnInicio, textFieldPontos2);
+		Thread j2 = new JogadaTela("JOGADOR 2", controle, dados, labelJoga2_1, labelJoga2_2, textField1, textField2, textField3, btnInicio, textFieldPontos2, chckbxFimJogo);
 		j2.start();
-		Thread j3 = new JogadaTela("JOGADOR 3", controle, dados, labelJoga3_1, labelJoga3_2, textField1, textField2, textField3, btnInicio, textFieldPontos3);
+		Thread j3 = new JogadaTela("JOGADOR 3", controle, dados, labelJoga3_1, labelJoga3_2, textField1, textField2, textField3, btnInicio, textFieldPontos3, chckbxFimJogo);
 		j3.start();
-		Thread j4 = new JogadaTela("JOGADOR 4", controle, dados, labelJoga4_1, labelJoga4_2, textField1, textField2, textField3, btnInicio, textFieldPontos4);
+		Thread j4 = new JogadaTela("JOGADOR 4", controle, dados, labelJoga4_1, labelJoga4_2, textField1, textField2, textField3, btnInicio, textFieldPontos4, chckbxFimJogo);
 		j4.start();
-		Thread j5 = new JogadaTela("JOGADOR 5", controle, dados, labelJoga5_1, labelJoga5_2, textField1, textField2, textField3, btnInicio, textFieldPontos5);
+		Thread j5 = new JogadaTela("JOGADOR 5", controle, dados, labelJoga5_1, labelJoga5_2, textField1, textField2, textField3, btnInicio, textFieldPontos5, chckbxFimJogo);
 		j5.start();
-		Thread j6 = new JogadaTela("JOGADOR 6", controle, dados, labelJoga6_1, labelJoga6_2, textField1, textField2, textField3, btnInicio, textFieldPontos6);
+		Thread j6 = new JogadaTela("JOGADOR 6", controle, dados, labelJoga6_1, labelJoga6_2, textField1, textField2, textField3, btnInicio, textFieldPontos6, chckbxFimJogo);
 		j6.start();
-		Thread j7 = new JogadaTela("JOGADOR 7", controle, dados, labelJoga7_1, labelJoga7_2, textField1, textField2, textField3, btnInicio, textFieldPontos7);
+		Thread j7 = new JogadaTela("JOGADOR 7", controle, dados, labelJoga7_1, labelJoga7_2, textField1, textField2, textField3, btnInicio, textFieldPontos7, chckbxFimJogo);
 		j7.start();
-		Thread j8 = new JogadaTela("JOGADOR 8", controle, dados, labelJoga8_1, labelJoga8_2, textField1, textField2, textField3, btnInicio, textFieldPontos8);
+		Thread j8 = new JogadaTela("JOGADOR 8", controle, dados, labelJoga8_1, labelJoga8_2, textField1, textField2, textField3, btnInicio, textFieldPontos8, chckbxFimJogo);
 		j8.start();
-		Thread j9 = new JogadaTela("JOGADOR 9", controle, dados, labelJoga9_1, labelJoga9_2, textField1, textField2, textField3, btnInicio, textFieldPontos9);
+		Thread j9 = new JogadaTela("JOGADOR 9", controle, dados, labelJoga9_1, labelJoga9_2, textField1, textField2, textField3, btnInicio, textFieldPontos9, chckbxFimJogo);
 		j9.start();
-		Thread j10 = new JogadaTela("JOGADOR 10", controle, dados, labelJoga10_1, labelJoga10_2, textField1, textField2, textField3, btnInicio, textFieldPontos10);
+		Thread j10 = new JogadaTela("JOGADOR 10", controle, dados, labelJoga10_1, labelJoga10_2, textField1, textField2, textField3, btnInicio, textFieldPontos10, chckbxFimJogo);
 		j10.start();
-		Thread j11 = new JogadaTela("JOGADOR 11", controle, dados, labelJoga11_1, labelJoga11_2, textField1, textField2, textField3, btnInicio, textFieldPontos11);
+		Thread j11 = new JogadaTela("JOGADOR 11", controle, dados, labelJoga11_1, labelJoga11_2, textField1, textField2, textField3, btnInicio, textFieldPontos11, chckbxFimJogo);
 		j11.start();
-		Thread j12 = new JogadaTela("JOGADOR 12", controle, dados, labelJoga12_1, labelJoga12_2, textField1, textField2, textField3, btnInicio, textFieldPontos12);
+		Thread j12 = new JogadaTela("JOGADOR 12", controle, dados, labelJoga12_1, labelJoga12_2, textField1, textField2, textField3, btnInicio, textFieldPontos12, chckbxFimJogo);
 		j12.start();
 		
 	

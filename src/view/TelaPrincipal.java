@@ -16,6 +16,8 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import java.awt.Color;
+import javax.swing.JCheckBox;
 
 public class TelaPrincipal extends JFrame {
 
@@ -62,6 +64,7 @@ public class TelaPrincipal extends JFrame {
 	private JTextField textFieldPontos11;
 	private JTextField textFieldPontos12;
 	private JButton btnInicio;
+	private JCheckBox chckbxFimJogo;
 
 	private JLabel lblNewLabel;
 	private JLabel lblJogador;
@@ -130,12 +133,6 @@ public class TelaPrincipal extends JFrame {
 		dados.add("/imagem/dado4.jpg");
 		dados.add("/imagem/dado5.jpg");
 		dados.add("/imagem/dado6.jpg");
-		dados.add("/imagem/dado7.jpg");
-		dados.add("/imagem/dado8.jpg");
-		dados.add("/imagem/dado9.jpg");
-		dados.add("/imagem/dado10.jpg");
-		dados.add("/imagem/dado11.jpg");
-		dados.add("/imagem/dado12.jpg");
 
 		labelJoga1_1 = new JLabel("");
 		labelJoga1_1.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/dado1.jpg")));
@@ -358,6 +355,7 @@ public class TelaPrincipal extends JFrame {
 
 		
 		textFieldPontos1 = new JTextField();
+		//textFieldPontos1.setBackground(Color.WHITE);
 		textFieldPontos1.setEditable(false);
 		textFieldPontos1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		textFieldPontos1.setBounds(73, 123, 22, 27);
@@ -501,13 +499,19 @@ public class TelaPrincipal extends JFrame {
 		textFieldPontos12.setBounds(827, 289, 22, 27);
 		contentPane.add(textFieldPontos12);
 		
+		chckbxFimJogo = new JCheckBox("jogar at\u00E9 3 ganhadores");
+		chckbxFimJogo.setBounds(619, 424, 175, 41);
+		contentPane.add(chckbxFimJogo);
+		
 		BtInicioControle btInicio = new BtInicioControle(dados, labelJoga1_1, labelJoga1_2, labelJoga2_2, labelJoga2_1,
 				labelJoga3_2, labelJoga3_1, labelJoga4_2, labelJoga4_1, labelJoga5_2, labelJoga5_1, labelJoga6_1,
 				labelJoga6_2, labelJoga7_1, labelJoga7_2, labelJoga8_2, labelJoga8_1, labelJoga9_1, labelJoga9_2,
 				labelJoga10_1, labelJoga10_2, labelJoga11_1, labelJoga11_2, labelJoga12_1, labelJoga12_2, textField1,
 				textField2, textField3, textFieldPontos1, textFieldPontos2, textFieldPontos3, textFieldPontos4, textFieldPontos5,
 				textFieldPontos6, textFieldPontos7, textFieldPontos8, textFieldPontos9, textFieldPontos10,
-				textFieldPontos11, textFieldPontos12, btnInicio);
+				textFieldPontos11, textFieldPontos12, btnInicio, chckbxFimJogo);
+		
+	
 
 
 		btnInicio.addActionListener(btInicio);
